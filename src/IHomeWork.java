@@ -1,11 +1,11 @@
 public interface IHomeWork {
 
-    public int getLesson();
+    int getLesson();
 
-    public int getHomeWork();
+    int getHomeWork();
 
-    public String getDescription();
+    String getDescription();
 
-    public void Run();
+    void Run();
 }
 
