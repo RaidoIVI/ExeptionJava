@@ -1,5 +1,7 @@
+
 public class Parse {
     public static int ToInt(String value) {
+        if (value.isEmpty()) throw new ParseException();
         int result = 0;
         boolean sign = value.charAt(0) == 45;
         for (int i = sign ? 1 : 0; i < value.length(); i++) {
@@ -13,6 +15,7 @@ public class Parse {
     }
 
     public static Double ToDouble(String value) {
+        if (value.isEmpty()) throw new ParseException();
         int intPart;
         int fractionalPart;
         int dotIndex = 0;
@@ -29,8 +32,9 @@ public class Parse {
             return (double) intPart;
         }
     }
+
     static class ParseException extends RuntimeException {
-        ParseException(){
+        ParseException() {
             super("Распарсить не получилось");
         }
     }
