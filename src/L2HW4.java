@@ -34,15 +34,15 @@ public class L2HW4 implements IHomeWork {
         } while (!successEnter);
     }
 
-    private String UserEnter() {
-        Scanner in = new Scanner(System.in );
+    private String UserEnter() throws NullUserEnter {
+        Scanner in = new Scanner(System.in);
         System.out.print("Введите строку: ");
-        var userEnter = in.nextLine() ;
+        var userEnter = in.nextLine();
         if (userEnter.isEmpty()) throw new NullUserEnter();
         return userEnter;
     }
 
-    static class NullUserEnter extends RuntimeException {
+    static class NullUserEnter extends Exception {
         NullUserEnter() {
             super("Вы ничего не ввели");
         }
