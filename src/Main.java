@@ -4,6 +4,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         var lessonList = new ArrayList<IHomeWork>();
+        lessonList.add(new L1HW1());
+        lessonList.add(new L1HW2());
+        lessonList.add(new L1HW3());
+        lessonList.add(new L1HW4());
         lessonList.add(new L2HW1());  // Вот здесь бы добавить все классы реализующие IHomeWork и отсортировать по уроку и номеру ДЗ
         lessonList.add(new L2HW2());
         lessonList.add(new L2HW3());
